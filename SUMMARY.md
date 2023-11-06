@@ -23,12 +23,12 @@
   * [deploy MOS](docs/base/mos/mos\_deploy\_en.md)
   * [Messenger](docs/base/mos/Messenger\_en.md)
 * [map-relay-chain(atlas)](docs/base/mapo-relay-chain/nodes/architecture\_en.md)
-  * [atlas architecture](base/architecture\_en/atlas-architecture/README.md)
+  * atlas architecture
     * [atlas architecture](docs/base/mapo-relay-chain/nodes/architecture\_en.md)
-    * [atlas genesis](base/architecture\_en/atlas-architecture/atlas-genesis/README.md)
+    * atlas genesis
       * [genesis config](docs/base/mapo-relay-chain/nodes/genesis-config\_en.md)
       * [genesis contract](docs/base/mapo-relay-chain/genesis-contract/index\_en.md)
-        * [ABI](base/architecture\_en/atlas-architecture/atlas-genesis/index\_en/abi/README.md)
+        * ABI
           * [Accounts](docs/base/mapo-relay-chain/genesis-contract/accounts\_en.md)
           * [Election](docs/base/mapo-relay-chain/genesis-contract/election\_en.md)
           * [EpochRewards](docs/base/mapo-relay-chain/genesis-contract/epoch-rewards\_en.md)
@@ -37,13 +37,13 @@
         * [address](docs/base/mapo-relay-chain/genesis-contract/address\_en.md)
         * [deploy](docs/base/mapo-relay-chain/genesis-contract/deploy\_en.md)
     * [precompile-contract](base/architecture\_en/atlas-architecture/precompile-contract.md)
-    * [protocol](base/architecture\_en/atlas-architecture/protocol/README.md)
+    * protocol
       * [Proof of Stake](docs/base/mapo-relay-chain/protocol/pos\_en.md)
       * [consensus](docs/base/mapo-relay-chain/protocol/consensus\_en.md)
       * [election](docs/base/mapo-relay-chain/protocol/election\_en.md)
       * [rewards](docs/base/mapo-relay-chain/protocol/rewards\_en.md)
       * [governance](docs/base/mapo-relay-chain/protocol/governance\_en.md)
-  * [deploy atlas](base/architecture\_en/deploy-atlas/README.md)
+  * deploy atlas
     * [run atlas](docs/base/mapo-relay-chain/nodes/run-a-node\_en.md)
     * [run atlas(archive)](docs/base/mapo-relay-chain/nodes/archive-nodes\_en.md)
     * [run atlas(bootnodes)](docs/base/mapo-relay-chain/nodes/bootnodes\_en.md)
@@ -55,9 +55,9 @@
     * [Vote](docs/base/mapo-relay-chain/marker/vote\_en.md)
     * [Common](docs/base/mapo-relay-chain/marker/common\_en.md)
   * [make private network(atlas)](docs/base/mapo-relay-chain/make-private-network\_en.md)
-  * [public service](base/architecture\_en/public-service/README.md)
+  * public service
     * [public network](docs/base/mapo-relay-chain/public-service\_en.md)
-  * [example](base/architecture\_en/example/README.md)
+  * example
     * [how-to-become-a-new-validator](docs/base/mapo-relay-chain/example/how-to-become-a-new-validator\_en.md)
     * [how-to-become-a-new-validator(advanced)](docs/base/mapo-relay-chain/example/how-to-become-a-new-validator-advanced\_en.md)
 * [Compass(maintainer，messenger)](docs/base/Compass/index\_en.md)
@@ -91,16 +91,16 @@
     * [light client update state](docs/mapo-stack/chains-connect/non-evm-chain/index\_en.md#maintainer)
     * [MOS](docs/mapo-stack/chains-connect/non-evm-chain/index\_en.md#mos)
 * [How to develop cross-chain applications](docs/mapo-stack/omni-dapp/index.md)
-* [SDK/API](mapo-stack/sdk-api/README.md)
+* SDK/API
   * [MOS interface](docs/sdk/mos/index\_en.md)
   * [Light client interface](docs/sdk/light-client/index\_en.md)
-  * [Atlas RPC](mapo-stack/sdk-api/atlas-rpc/README.md)
+  * Atlas RPC
     * [json-rpc](docs/sdk/mapo-relay-chain/json-rpc/index\_en.md)
       * [atlas json rpc](docs/sdk/mapo-relay-chain/json-rpc/atlas-json-rpc.md)
       * [atlas consensus rpc](docs/sdk/mapo-relay-chain/json-rpc/atlas-consensus-rpc.md)
     * [javaScript sdk](docs/sdk/mapo-relay-chain/javaScript.md)
     * [go-sdk](docs/sdk/mapo-relay-chain/go-sdk\_en.md)
-  * [Backend API](mapo-stack/sdk-api/backend-api/README.md)
+  * Backend API
     * [SCAN API](docs/sdk/backend/index.md)
 
 ## Zero-Knowledge Proof
