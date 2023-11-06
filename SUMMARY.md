@@ -1,6 +1,6 @@
 # Table of contents
 
-* [README](README.md)
+* [MAP Protocol Developer Documentation](README.md)
 
 ## Base
 
