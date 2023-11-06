@@ -1,111 +1,122 @@
-# Summary
+# MAPO Protocol Development documentation
 
-本文档旨在帮助你认识MAPO，或使用它构建你想构建的去中心化应用，或将一条区块链接入MAPO实现与其他区块链的互通。该文档介绍了MAPO的概念，解释了MAPO技术堆栈，以及MAPO应用的使用案例。
+This document aims to help you understand MAPO, how to use it to build decentralized applications, and how to interconnect a blockchain with MAPO. The document introduces the concept of MAPO, explains the MAPO technology stack, and provides use cases for MAPO applications.
 
-基于开源的社区准则，你可以随时提出新的主题，添加新的内容，并在认为可能有用的地方提供示例。所有文档都可以通过github编辑，并会存储到去中心化存储设施`Arweave`。如果不确定如何操作，请遵循[说明进行](docs/editing-markdown.md)。
+Based on open-source community guidelines, you can propose new topics, add new content, and provide examples where you think it would be helpful. All documents can be edited through GitHub and are stored on decentralized storage facilities like `Arweave`. If you are unsure about how to proceed, please follow the [instructions](docs/editing-markdown.md).
 
-如果这是你第一次尝试MAPO开发，建议你从头开始阅读，这不仅可以让你更好的熟悉MAPO，其中涉及区块链底层的技术以及ZK等内容，也会让你对点对点的代码信任有一个全新的认识。[english](./readme_en.md)
+If this is your first time diving into MAPO development, it is recommended that you start from the beginning. This will not only familiarize you with MAPO but also delve into the underlying blockchain technologies and concepts like ZK, providing you with a new understanding of peer-to-peer code trust.
 
-## 基础主題
 
-* [脉波简介](docs/base/intro-to-mapo/index.md)
-* [MAPO币](docs/base/intro-to-mapo/mapo-coin.md)
-* [全链去中心化应用](docs/base/omnichain-dapp/index.md)
-* [全链应用与单链或多链应用的区别](docs/base/omnichain-dapp/different.md)
-* [第三方信任跨链与点对点跨链方案区别](docs/base/omnichain-dapp/the-other.md)
-* [帐户](docs/base/accounts/index.md)
-* [交易](docs/base/transactions/index.md)
-* [区块](docs/base/block/index.md)
-* [MPT树](docs/base/mpt/index.md)
-* [RLP编码](docs/base/rlp/index.md)
-* [Gas费用](docs/base/gas/index.md)
-* [消息跨链](docs/base/cross-chain-message/index.md)
-* [轻客户端](docs/base/light-client/index.md)
-  * [MAPO轻客户端](docs/base/light-client/MapoLightClient.md)
-* [全链开发组件层MOS](docs/base/mos/index.md)
-  * [MOS接口和功能](docs/base/mos/mos\_interface.md)
-  * [MOS的部署](docs/base/mos/mos\_deploy.md)
-  * [Messenger](docs/base/mos/Messenger.md)
-* [中继链(atlas)](docs/base/mapo-relay-chain/nodes/architecture.md)
-  * 节点架构
-    * [中继链（atlas）架构 - 区块和交易结构](docs/base/mapo-relay-chain/nodes/architecture.md)
-    * 创世
-      * [创世配置 - 介绍创世配置文件](docs/base/mapo-relay-chain/nodes/genesis-config.md)
-      * [创世合约](docs/base/mapo-relay-chain/genesis-contract/index.md)
-        * ABI
-          * [Accounts](docs/base/mapo-relay-chain/genesis-contract/accounts.md)
-          * [Election](docs/base/mapo-relay-chain/genesis-contract/election.md)
-          * [EpochRewards](docs/base/mapo-relay-chain/genesis-contract/epoch-rewards.md)
-          * [LockedGold](docs/base/mapo-relay-chain/genesis-contract/locked-gold.md)
-          * [Validators](docs/base/mapo-relay-chain/genesis-contract/validators.md)
-        * [地址](docs/base/mapo-relay-chain/genesis-contract/address.md)
-        * [部署](docs/base/mapo-relay-chain/genesis-contract/deploy.md)
-    * [预编译合约 - 支持的预编译合约](docs/base/mapo-relay-chain/precompile-contract.md)
-    * 协议
-      * [Proof of Stake](docs/base/mapo-relay-chain/protocol/pos.md)
-      * [共识](docs/base/mapo-relay-chain/protocol/consensus.md)
-      * [选举](docs/base/mapo-relay-chain/protocol/election.md)
-      * [奖励](docs/base/mapo-relay-chain/protocol/rewards.md)
-      * [治理](docs/base/mapo-relay-chain/protocol/governance.md)
-  * 部署节点 - 包括公共RPC节点
-    * [运行节点（中继链）](docs/base/mapo-relay-chain/nodes/run-a-node.md)
-    * [归档节点（中继链）](docs/base/mapo-relay-chain/nodes/archive-nodes.md)
-    * [引导节点（中继链）](docs/base/mapo-relay-chain/nodes/bootnodes.md)
-    * [验证节点 （中继链）](docs/base/mapo-relay-chain/nodes/validator-nodes.md)
-    * [RPC节点（中继链）](docs/base/mapo-relay-chain/nodes/rpc-nodes.md)
-  * [Marker工具 - atlas的简易客户端工具](docs/base/mapo-relay-chain/marker/overview.md)
-    * [Genesis](docs/base/mapo-relay-chain/marker/genesis.md)
-    * [Validator](docs/base/mapo-relay-chain/marker/validator.md)
-    * [Vote](docs/base/mapo-relay-chain/marker/vote.md)
-    * [Common](docs/base/mapo-relay-chain/marker/common.md)
-  * [搭建私有网络](docs/base/mapo-relay-chain/make-private-network.md)
-  * 公共网络服务信息
-    * [公共网络](docs/base/mapo-relay-chain/public-service.md)
-  * 示例
-    * [如何成为一个 Validator 并加入到 Atlas 网络中](docs/base/mapo-relay-chain/example/how-to-become-a-new-validator.md)
-    * [如何成为一个 Validator 并加入到 Atlas 网络中\[高级\]](docs/base/mapo-relay-chain/example/how-to-become-a-new-validator-advanced.md)
-* [Compass(maintainer，messenger)](docs/base/Compass/index.md)
-  * [Compass - 架构及模块说明](docs/base/Compass/index.md#compass---架构及模块说明)
-  * [Compass配置参数](docs/base/Compass/index.md#compass环境与部署)
-  * [Compass环境与部署](docs/base/Compass/index.md#compass环境与部署)
-  * [Compass二次开发 - 基于compass定义自己的路由服务](docs/base/Compass/index.md#compass二次开发---基于compass定义自己的路由服务)
+## Base
 
-## MAPO技术堆栈
++ [MAPO Introduction](docs/base/intro-to-mapo/index_en.md)-----MAPO brief introduction
++ [MAPO coins](docs/base/intro-to-mapo/mapo-coin_en.md)-----MAPO coins brief introduction
++ [Full chain DAPP](docs/base/omnichain-dapp/index_en.md)------ Introduction to dapp covering various blockchains
++ [Differences Between Full-Chain Applications and Single or Multi-Chain Applications](docs/base/omnichain-dapp/different_en.md)
++ [Differences Between Third-Party Trusted Cross-Chain and Peer-to-Peer Cross-Chain Solutions](docs/base/omnichain-dapp/the-other_en.md)
++ [Account](docs/base/accounts/index_en.md) 
++ [Transactions](docs/base/transactions/index_en.md) 
++ [block](docs/base/block/index_en.md)
++ [MPT tree](docs/base/mpt/index_en.md) 
++ [RLP](docs/base/rlp/index_en.md)
++ [Gas fee](docs/base/gas/index_en.md)
++ [Cross Chain Message](docs/base/cross-chain-message/index_en.md)
++ [light client](docs/base/light-client/index_en.md)
+  + [MAPO light client](docs/base/light-client/MapoLightClient_en.md) 
++ [MOS](docs/base/mos/index_en.md)
+    + [MOS interface and functions](docs/base/mos/mos_interface_en.md)
+    + [deploy MOS](docs/base/mos/mos_deploy_en.md)
+    + [Messenger](docs/base/mos/Messenger_en.md) 
++ [map-relay-chain(atlas)](docs/base/mapo-relay-chain/nodes/architecture_en.md)
+    + atlas architecture
+        + [atlas architecture](docs/base/mapo-relay-chain/nodes/architecture_en.md)
+        + atlas genesis
+          + [genesis config](docs/base/mapo-relay-chain/nodes/genesis-config_en.md)
+          + [genesis contract](/docs/base/mapo-relay-chain/genesis-contract/index_en.md)
+            + ABI
+              + [Accounts](docs/base/mapo-relay-chain/genesis-contract/accounts_en.md)
+              + [Election](docs/base/mapo-relay-chain/genesis-contract/election_en.md)
+              + [EpochRewards](docs/base/mapo-relay-chain/genesis-contract/epoch-rewards_en.md)
+              + [LockedGold](docs/base/mapo-relay-chain/genesis-contract/locked-gold_en.md)
+              + [Validators](docs/base/mapo-relay-chain/genesis-contract/validators_en.md)
+            + [address](docs/base/mapo-relay-chain/genesis-contract/address_en.md)
+            + [deploy](docs/base/mapo-relay-chain/genesis-contract/deploy_en.md)
+        + [precompile-contract](docs/base/mapo-relay-chain/precompile-contract_.md)
+        + protocol
+          + [Proof of Stake](docs/base/mapo-relay-chain/protocol/pos_en.md)
+          + [consensus](docs/base/mapo-relay-chain/protocol/consensus_en.md)
+          + [election](docs/base/mapo-relay-chain/protocol/election_en.md)
+          + [rewards](docs/base/mapo-relay-chain/protocol/rewards_en.md)
+          + [governance](docs/base/mapo-relay-chain/protocol/governance_en.md)
+    + deploy atlas
+      + [run atlas](docs/base/mapo-relay-chain/nodes/run-a-node_en.md)
+      + [run atlas(archive)](docs/base/mapo-relay-chain/nodes/archive-nodes_en.md)
+      + [run atlas(bootnodes)](docs/base/mapo-relay-chain/nodes/bootnodes_en.md)
+      + [run atlas(validator)](docs/base/mapo-relay-chain/nodes/validator-nodes_en.md)
+      + [run atlas（RPC）](docs/base/mapo-relay-chain/nodes/rpc-nodes_en.md)
+    + [Marker tool](docs/base/mapo-relay-chain/marker/overview_en.md)
+      + [Genesis](docs/base/mapo-relay-chain/marker/genesis_en.md) 
+      + [Validator](docs/base/mapo-relay-chain/marker/validator_en.md) 
+      + [Vote](docs/base/mapo-relay-chain/marker/vote_en.md) 
+      + [Common](docs/base/mapo-relay-chain/marker/common_en.md)
+    + [make private network(atlas)](docs/base/mapo-relay-chain/make-private-network_en.md)
+    + public service   
+      + [public network](docs/base/mapo-relay-chain/public-service_en.md)
+    + example
+      + [how-to-become-a-new-validator](docs/base/mapo-relay-chain/example/how-to-become-a-new-validator_en.md)
+      + [how-to-become-a-new-validator(advanced)](docs/base/mapo-relay-chain/example/how-to-become-a-new-validator-advanced_en.md)
++ [Compass(maintainer，messenger)](docs/base/Compass/index_en.md)
+    + [Compass - arch and model](docs/base/Compass/index_en.md#compass---the-introduction-of-model-and-arch)
+    + [Compass - config](docs/base/Compass/index_en.md#config-of-compass)
+    + [Compass - deploy](docs/base/Compass/index_en.md#compass-env-and-deploy)
+    + [Compass secondary development - define your own routing service based on compass](docs/base/Compass/index_en.md#compass-secondary-development---define-your-own-routing-service-based-on-compass)
 
-* [堆栈](docs/mapo-stack/stack/index.md)
-* [EVM兼容](docs/mapo-stack/compatible-evm/index.md)
-  * [智能合约语言](docs/mapo-stack/compatible-evm/solidity.md)
-  * [智能合约结构](docs/mapo-stack/compatible-evm/anatomy.md)
-  * [智能合约库](docs/mapo-stack/compatible-evm/libraries.md)
-  * [编译智能合约](docs/mapo-stack/compatible-evm/compile.md)
-  * [测试智能合约](docs/mapo-stack/compatible-evm/testing.md)
-  * [部署智能合约](docs/mapo-stack/compatible-evm/deploying.md)
-  * [可组合性](docs/mapo-stack/compatible-evm/composability.md)
-  * [智能合约安全性](docs/mapo-stack/compatible-evm/security.md)
-  * [智能合约形式化验证](docs/mapo-stack/compatible-evm/formal-verification.md)
-  * [开发框架](docs/mapo-stack/compatible-evm/frameworks.md)
-  * [开发网络](docs/mapo-stack/compatible-evm/dev-network.md)
-* [实现跨链互通](docs/mapo-stack/chains-connect/index.md)
-  * [EVM兼容链的跨链互通](docs/mapo-stack/chains-connect/evm-chain/index.md)
-    * [轻客户端验证](docs/mapo-stack/chains-connect/evm-chain/index.md#light-client层)
-    * [轻客户端状态更新](docs/mapo-stack/chains-connect/evm-chain/index.md#maintainer开发)
-    * [MOS层](docs/mapo-stack/chains-connect/evm-chain/index.md#mos层)
-  * [非EVM兼容链的跨链互通](docs/mapo-stack/chains-connect/non-evm-chain/index.md)
-    * [轻客户端验证](docs/mapo-stack/chains-connect/non-evm-chain/index.md#light-client层)
-    * [轻客户端状态更新](docs/mapo-stack/chains-connect/non-evm-chain/index.md#maintainer开发)
-    * [MOS层](docs/mapo-stack/chains-connect/non-evm-chain/index.md#mos层)
-* [如何开发全链应用](docs/mapo-stack/omni-dapp/index.md)
-* SDK/API - mapo支持的API
-  * [MOS接口](docs/sdk/mos/index.md)
-  * [轻客户端接口](docs/sdk/light-client/index.md)
-  * 中继链RPC
-    * [json-rpc](docs/sdk/mapo-relay-chain/json-rpc/index.md)
-      * [atlas json rpc](docs/sdk/mapo-relay-chain/json-rpc/atlas-json-rpc.md)
-      * [atlas consensus rpc](docs/sdk/mapo-relay-chain/json-rpc/atlas-consensus-rpc.md)
-    * [javaScript sdk](docs/sdk/mapo-relay-chain/javaScript.md)
-    * [go-sdk](mapo-ji-shu-dui-zhan/sdkapi-mapo-zhi-chi-de-api/zhong-ji-lian-rpc/go-sdk.md)
-  * 后端API
-    * [浏览器API](docs/sdk/backend/index.md)
-    * 数据统计与分析API
+## MAPO Stack
 
-## 零知识证明(zk)
++ [stack](docs/mapo-stack/stack/index.md)
++ [Compatible-EVM](docs/mapo-stack/compatible-evm/index_en.md)
+  + [Smart Contracts Language](docs/mapo-stack/compatible-evm/solidity_en.md)
+  + [Smart Contracts Anatomy](docs/mapo-stack/compatible-evm/anatomy_en.md)
+  + [Smart Contracts Libraries](docs/mapo-stack/compatible-evm/libraries_en.md)
+  + [Smart Contracts Compile](docs/mapo-stack/compatible-evm/compile_en.md)
+  + [Smart Contracts Testing](docs/mapo-stack/compatible-evm/testing_en.md)
+  + [Smart Contracts Deploy](docs/mapo-stack/compatible-evm/deploying_en.md)
+  + [Smart Contracts Composability](docs/mapo-stack/compatible-evm/composability_en.md)
+  + [Smart Contracts Security](docs/mapo-stack/compatible-evm/security_en.md)
+  + [Formal-Verification](docs/mapo-stack/compatible-evm/formal-verification_en.md)
+  + [Frameworks](docs/mapo-stack/compatible-evm/frameworks_en.md)
+  + [dev-network](docs/mapo-stack/compatible-evm/dev-network_en.md)
++ [MAPO Implement Cross-chain Interoperability](docs/mapo-stack/chains-connect/index_en.md)
+  + [integration of MAP with EVM-Compatible Chains](docs/mapo-stack/chains-connect/evm-chain/index_en.md)
+    + [light client verify](docs/mapo-stack/chains-connect/evm-chain/index_en.md#light-client)
+    + [light client update state](docs/mapo-stack/chains-connect/evm-chain/index_en.md#maintainer) 
+      + [maintainer support the new chain](docs/mapo-stack/chains-connect/evm-chain/index_en.md#maintainer) 
+      + [deploy maintainer](docs/base/Compass/index_en.md#compass-env-and-deploy) 
+    + [MOS](docs/mapo-stack/chains-connect/evm-chain/index_en.md#mos)
+      + [MOS development](docs/mapo-stack/chains-connect/evm-chain/index_en.md#mos-contract-development)
+      + [Messeager Development](docs/mapo-stack/chains-connect/evm-chain/index_en.md#messeager-development) 
+  + [integration of MAP with Non-EVM-Compatible Chains](docs/mapo-stack/chains-connect/non-evm-chain/index_en.md)
+    + [light client verify](docs/mapo-stack/chains-connect/non-evm-chain/index_en.md#light-client)
+    + [light client update state](docs/mapo-stack/chains-connect/non-evm-chain/index_en.md#maintainer)
+    + [MOS](docs/mapo-stack/chains-connect/non-evm-chain/index_en.md#mos) 
+      + [Messenger](docs/mapo-stack/chains-connect/non-evm-chain/index_en.md#messeager)
++ [How to develop cross-chain applications](docs/mapo-stack/omni-dapp/index.md)
++ SDK/API 
+  +  [MOS interface](docs/sdk/mos/index_en.md)
+  +  [Light client interface](docs/sdk/light-client/index_en.md)
+  +  Atlas RPC
+     +  [json-rpc](docs/sdk/mapo-relay-chain/json-rpc/index_en.md)
+        +  [atlas json rpc](docs/sdk/mapo-relay-chain/json-rpc/atlas-json-rpc.md)
+        +  [atlas consensus rpc](docs/sdk/mapo-relay-chain/json-rpc/atlas-consensus-rpc.md)
+     +  [javaScript sdk](docs/sdk/mapo-relay-chain/javaScript.md)
+     +  [go-sdk](/docs/sdk/mapo-relay-chain/go-sdk_en.md)
+  + Backend API
+    + [SCAN API](docs/sdk/backend/index.md)
+
+
+## Zero-Knowledge Proof
+
+
+
+
+
