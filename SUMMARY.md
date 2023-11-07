@@ -1,6 +1,6 @@
 # Table of contents
 
-* [MAP Protocol Developer Documentation](README.md)
+* [MAPO Developer Docs](README.md)
 
 ## Base
 
