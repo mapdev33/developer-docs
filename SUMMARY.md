@@ -10,6 +10,7 @@
 * [Differences Between Full-Chain Applications and Single or Multi-Chain Applications](docs/base/omnichain-dapp/different\_en.md)
 * [Differences Between Third-Party Trusted Cross-Chain and Peer-to-Peer Cross-Chain Solutions](docs/base/omnichain-dapp/the-other\_en.md)
 * [BTC layer2](docs/btc-layer2/index_en.md)
+  * [brc-201](docs/btc-layer2/brc201.md)
 * [Account](docs/base/accounts/index\_en.md)
 * [Transactions](docs/base/transactions/index\_en.md)
 * [block](docs/base/block/index\_en.md)
