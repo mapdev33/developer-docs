@@ -112,3 +112,5 @@
 
 
 ## Zero-Knowledge Proof
+
+* [zk proof](docs/zk/index_en.md)

@@ -6,7 +6,7 @@ Based on open-source community guidelines, you can propose new topics, add new c
 
 If this is your first time diving into MAPO development, it is recommended that you start from the beginning. This will not only familiarize you with MAPO but also delve into the underlying blockchain technologies and concepts like ZK, providing you with a new understanding of peer-to-peer code trust.
 
-
+Also available in [Chinese](https://mapo.gitbook.io/docs-zh/).
 
 
 
