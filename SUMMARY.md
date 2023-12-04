@@ -5,7 +5,7 @@
 ## Base
 
 * [MAPO Introduction](docs/base/intro-to-mapo/index_en.md)-----MAPO brief introduction
-* [MAPO coins](docs/base/intro-to-mapo/mapo-coin_en.md)-----MAPO coins brief introduction
+* [MAPO token](docs/base/intro-to-mapo/mapo-coin_en.md)-----MAPO token brief introduction
 * [Omnichain DAPP](docs/base/omnichain-dapp/index_en.md)------ Introduction to dapp covering various blockchains
 * [Differences Between Omnichain Applications and Single or Multi-Chain Applications](docs/base/omnichain-dapp/different_en.md)
 * [Differences Between Third-Party Trusted Cross-Chain and Peer-to-Peer Cross-Chain Solutions](docs/base/omnichain-dapp/the-other_en.md)
